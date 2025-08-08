@@ -13,7 +13,7 @@ for i in range(R):
     visited.append([0]*H)
 
 # Directions: up, down, left, right
-dr = [-1, 1, 0, 0]  # dr, dc = direction row, direction column  
+dr = [-1, 1, 0, 0] 
 dc = [0, 0, -1, 1]  
 
 def bfs(sr, sc):    # sr, sc = starting row, starting column
@@ -24,7 +24,7 @@ def bfs(sr, sc):    # sr, sc = starting row, starting column
 
     front = 0
     while front < len(queue):
-        r,c = queue[front]
+        r,c = queue[front]    # r = row, c = column
         front += 1
         for i in range(4):
             nr,nc = r+dr[i], c+dc[i]  # nr, nc = neighbour row, nrighbour column
