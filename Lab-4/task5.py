@@ -1,8 +1,8 @@
 #task5
-task4_input = open('input5_5.txt',"r")
-task4_output = open('output5_5.txt',"w")
+task5_input = open('input5_5.txt',"r")
+task5_output = open('output5_5.txt',"w")
 
-cities,roads,dest= task4_input.readline().strip().split(" ")
+cities,roads,dest= task5_input.readline().strip().split(" ")
 uv = [0]* (int(cities) +1)
 
 visited= []
@@ -11,7 +11,7 @@ graph = {}
 dest = int(dest)
 
 for a in range (int(roads)) :
-  k = [int(x) for x in task4_input.readline().strip().split(' ')]
+  k = [int(x) for x in task5_input.readline().strip().split(' ')]
 
   if uv[k[0]] != 0 :
     uv[k[0]].append(k[1])
@@ -47,15 +47,15 @@ def bfs(visited, graph, dest, node) :
         visited.append(i)
         queue.append(i)
 
-  task4_output.write(f"Time:{time_step[dest]}\n")
+  task5_output.write(f"Time:{time_step[dest]}\n")
   var= str(dest)
-  for task4_input in range (time_step[dest]) :
+  for task5_input in range (time_step[dest]) :
     var= str(nod[dest])+" "+var
     dest= nod[dest]
 
-  task4_output.write(f"shortest path:{var}")
+  task5_output.write(f"shortest path:{var}")
 
 
 bfs(visited,graph,dest,1)
-task4_input.close()
-task4_output.close()
+task5_input.close()
+task5_output.close()
