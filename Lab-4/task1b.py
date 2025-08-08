@@ -1,4 +1,4 @@
-#task1a_b
+#task1b
 task1b_input = open('input1b_3.txt', 'r')
 task1b_output = open('output1b_3.txt', 'w')
 
