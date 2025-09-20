@@ -1,5 +1,4 @@
 #task3
-
 task3_input = open('input3_2.txt', 'r')
 task3_output = open('output3_2.txt', 'w')
 
